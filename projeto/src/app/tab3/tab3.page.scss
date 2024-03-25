@@ -1,0 +1,17 @@
+.dark-theme {
+
+    app-root {
+      --ion-background-color: #121212 !important;
+      color: #ffffff !important;
+    }
+  
+    ion-toolbar {
+      --ion-background-color: #333333 !important;
+      color: #ffffff !important;
+    }
+  
+    ion-button {
+      --color: #ffffff !important;
+    }
+  }
+  

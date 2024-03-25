@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Atualização de tarefas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="changeToDark()">MUDAR PARA DARK O TEMA</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [class.dark-theme]="change">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Pagina 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Pagina para atualizar uma tarefa em especifica"></app-explore-container>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Tarefa</ion-label>
+      <ion-input type="text" name="tarefa" [(ngModel)]="tarefa.tarefa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descrição da Tarefa</ion-label>
+      <ion-input type="text" name="descricaotarefa" [(ngModel)]="tarefa.descricao"></ion-input>
+    </ion-item>
+    <ion-button type="submit" class="ion-text-center" (click)="atualizarTarefa()">Enviar</ion-button>
+  </ion-list>
+</ion-content>

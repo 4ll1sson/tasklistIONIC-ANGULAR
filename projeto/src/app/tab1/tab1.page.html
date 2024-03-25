@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Lista de tarefas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="changeToDark()">MUDAR PARA DARK O TEMA</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [class.dark-theme]="change">
+  <app-explore-container name="Pagina 1">
+ 
+  </app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let tarefa of listaTarefas; index as i">
+      <ion-label>{{ tarefa.tarefa }}</ion-label>
+      <ion-label>{{ tarefa.descricao }}</ion-label>
+      <ion-button color="danger" (click)="deletarTarefa(i)" fill="outline" >  
+        <ion-icon slot="end" name="trash"></ion-icon>
+
+        Concluir tarefa</ion-button>
+      <ion-button color="primary" (click)="atualizarTarefa(tarefa)" shape="round">Atualizar tarefa</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
